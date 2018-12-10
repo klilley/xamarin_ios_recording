@@ -7,11 +7,26 @@ namespace FullCameraApp
 {
 	public partial class App : Application
 	{
+		public static bool shouldSave;
 		public App ()
 		{
 			InitializeComponent();
-		    MainPage = new CameraPage();
-        }
+			MainPage = new VideoPage();
+			MessagingCenter.Subscribe<App, object>(App.Current, "Pop", (snd, arg) =>
+			{
+				Device.BeginInvokeOnMainThread(() => {
+					MainPage.Navigation.PopModalAsync();
+				});
+			});
+			MessagingCenter.Subscribe<App, string>(App.Current, "OpenResult", (snd, arg) =>
+			{
+				Device.BeginInvokeOnMainThread(() => {
+					MainPage.Navigation.PushModalAsync(new Result(arg));
+				});
+			});
+
+
+		}
 
 		protected override void OnStart ()
 		{

@@ -60,6 +60,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CameraPageRenderer.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPicker.cs" />
+    <Compile Include="FormsVideoLibrary\VideoPlayerRenderer.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.Designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -93,6 +95,7 @@
     <Folder Include="Resources\drawable-xxhdpi\" />
     <Folder Include="Resources\drawable-xxxhdpi\" />
     <Folder Include="Resources\drawable\" />
+    <Folder Include="Resources\raw\" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FullCameraApp\FullCameraApp.csproj">

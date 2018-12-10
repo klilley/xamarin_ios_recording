@@ -9,7 +9,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="FullCameraPagePage.xaml">
+    <EmbeddedResource Update="Result.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="VideoPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>
